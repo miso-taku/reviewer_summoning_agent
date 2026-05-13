@@ -25,12 +25,12 @@
 
 [test-plan.md §4.1](./test-plan.md) に準拠。**先に pytest を書き、Red → 実装で Green。**
 
-- [ ] **1-1** `Theme` VO：トリム、1〜2000 文字（Unicode スカラ）、空不可（FUN §5.1 / TEC §4.4.2）
-- [ ] **1-2** `ManuscriptBundle`（または同等）：`draft_body` / `structure_memo` / `slides_summary`、少なくとも 1 ブロック非空、合計 200000 文字以下、各ブロック上限（FUN §5.1）
-- [ ] **1-3** `ReviewerId` / `RequestId` 等の識別子 VO（TEC §4.4.2）
-- [ ] **1-4** `domain/ports/` に `ReviewerSummoningPort` / `SingleReviewPort` / `EditorIntegrationPort` の Protocol（または ABC）（TEC §4.4.3）
-- [ ] **1-5** 召喚・レビュー・編集長用の **ドメイン型**（Pydantic に依存しないデータクラス等）と `domain/exceptions.py` の例外区分（入力 vs 想定外）
-- [ ] **1-6** `ReviewSession` 集約：レビュアー 3 名確定前の並列レビュー禁止、`reviewer_id` 整合、編集長は 3 レビュー完了後のみ（TEC §4.4.1）
+- [x] **1-1** `Theme` VO：トリム、1〜2000 文字（Unicode スカラ）、空不可（FUN §5.1 / TEC §4.4.2）
+- [x] **1-2** `ManuscriptBundle`（または同等）：`draft_body` / `structure_memo` / `slides_summary`、少なくとも 1 ブロック非空、合計 200000 文字以下、各ブロック上限（FUN §5.1）
+- [x] **1-3** `ReviewerId` / `RequestId` 等の識別子 VO（TEC §4.4.2）
+- [x] **1-4** `domain/ports/` に `ReviewerSummoningPort` / `SingleReviewPort` / `EditorIntegrationPort` の Protocol（または ABC）（TEC §4.4.3）
+- [x] **1-5** 召喚・レビュー・編集長用の **ドメイン型**（Pydantic に依存しないデータクラス等）と `domain/exceptions.py` の例外区分（入力 vs 想定外）
+- [x] **1-6** `ReviewSession` 集約：レビュアー 3 名確定前の並列レビュー禁止、`reviewer_id` 整合、編集長は 3 レビュー完了後のみ（TEC §4.4.1）
 
 ---
 
