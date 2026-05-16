@@ -36,11 +36,11 @@
 
 ## フェーズ 2 — application（TDD 第 2 波）
 
-- [ ] **2-1** `RunReviewPipelineUseCase`（ファイル名 `run_review_pipeline.py`）：コマンド入力 → ドメイン VO 検証呼び出し（TEC §4.3 手順 1）
-- [ ] **2-2** フェイクポート（固定戻り値）を注入し、**召喚 → 3 並列レビュー → 編集長 1 回**の呼び出し順・回数をアサート（test-plan §4.2）
-- [ ] **2-3** 並列方針：`asyncio.gather` 等。失敗時は TEC §6.2 の採用案（キャンセル or 先頭例外マップ）に合わせたテスト期待値を固定
-- [ ] **2-4** 全体タイムアウト 170s ラップ（`asyncio.wait_for`）と超過時のドメイン／アプリケーション例外（→ 後続で 504 / `REQUEST_TIMEOUT` に写像）（TEC §9）
-- [ ] **2-5** `application/mappers/`（必要なら）：ドメイン結果 → presentation 用 DTO 組み立ての純粋マッピング単体テスト
+- [x] **2-1** `RunReviewPipelineUseCase`（ファイル名 `run_review_pipeline.py`）：コマンド入力 → ドメイン VO 検証呼び出し（TEC §4.3 手順 1）
+- [x] **2-2** フェイクポート（固定戻り値）を注入し、**召喚 → 3 並列レビュー → 編集長 1 回**の呼び出し順・回数をアサート（test-plan §4.2）
+- [x] **2-3** 並列方針：`asyncio.gather` 等。失敗時は TEC §6.2 の採用案（キャンセル or 先頭例外マップ）に合わせたテスト期待値を固定
+- [x] **2-4** 全体タイムアウト 170s ラップ（`asyncio.wait_for`）と超過時のドメイン／アプリケーション例外（→ 後続で 504 / `REQUEST_TIMEOUT` に写像）（TEC §9）
+- [x] **2-5** `application/mappers/`（必要なら）：ドメイン結果 → presentation 用 DTO 組み立ての純粋マッピング単体テスト
 
 ---
 

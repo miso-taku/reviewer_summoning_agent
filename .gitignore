@@ -1,0 +1,72 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+*.manifest
+*.spec
+pip-log.txt
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# uv / packaging
+# （uv.lock は再現性のためコミットする想定）
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Type checker / linter
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pytype/
+
+# Secrets（テンプレは *.example のみコミット）
+.env
+.env.*
+!.env.example
+!.env.*.example
+backend/.env
+!backend/.env.example
+
+# --- Node / Next.js（web/ 追加時）---
+node_modules/
+.next/
+out/
+.turbo/
+.vercel/
+*.tsbuildinfo
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --- Editors / IDE（チーム共有設定をコミットする場合は negation で上書き）---
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Logs / misc ---
+*.log
+.cache/
