@@ -46,12 +46,12 @@
 
 ## フェーズ 3 — presentation（FastAPI・薄い層）
 
-- [ ] **3-1** `presentation/schemas`（または `dto`）に `ReviewRequestBody`、`ReviewerOut`、`ReviewItemOut`、`EditorOut`、`MetaOut`、`ReviewSuccessResponse`、`ErrorBody` / `ErrorEnvelope`（FUN §6 / TEC §5.2〜5.3）
-- [ ] **3-2** Pydantic 第 1 段バリデーション（型・各フィールドレンジ）と、ユースケース前のドメイン第 2 段（意味的制約）の両方を通す（TEC §5.3）
-- [ ] **3-3** `POST /api/v1/review` ルータ実装 → `RunReviewPipelineUseCase.execute` 呼び出し（TEC §7.1）
-- [ ] **3-4** 例外 → HTTP マッピング（422 `VALIDATION_ERROR`、502 `LLM_UPSTREAM_ERROR`、503 `LLM_UNAVAILABLE`、504 `REQUEST_TIMEOUT`、500 `INTERNAL_ERROR`）（FUN §8 / TEC §7.3）
-- [ ] **3-5** `presentation/main.py`：`CORSMiddleware`（`CORS_ALLOW_ORIGINS`）、アプリ組み立て、`dependencies.py` でユースケース＋実インフラの DI（TEC §8.1）
-- [ ] **3-6** `presentation` 単体：`TestClient` で LLM 非呼び出し（モック DI）のスキーマ・マッピングテスト（test-plan §3.1 presentation）
+- [x] **3-1** `presentation/schemas`（または `dto`）に `ReviewRequestBody`、`ReviewerOut`、`ReviewItemOut`、`EditorOut`、`MetaOut`、`ReviewSuccessResponse`、`ErrorBody` / `ErrorEnvelope`（FUN §6 / TEC §5.2〜5.3）
+- [x] **3-2** Pydantic 第 1 段バリデーション（型・各フィールドレンジ）と、ユースケース前のドメイン第 2 段（意味的制約）の両方を通す（TEC §5.3）
+- [x] **3-3** `POST /api/v1/review` ルータ実装 → `RunReviewPipelineUseCase.execute` 呼び出し（TEC §7.1）
+- [x] **3-4** 例外 → HTTP マッピング（422 `VALIDATION_ERROR`、502 `LLM_UPSTREAM_ERROR`、503 `LLM_UNAVAILABLE`、504 `REQUEST_TIMEOUT`、500 `INTERNAL_ERROR`）（FUN §8 / TEC §7.3）
+- [x] **3-5** `presentation/main.py`：`CORSMiddleware`（`CORS_ALLOW_ORIGINS`）、アプリ組み立て、`dependencies.py` でユースケース＋実インフラの DI（TEC §8.1）
+- [x] **3-6** `presentation` 単体：`TestClient` で LLM 非呼び出し（モック DI）のスキーマ・マッピングテスト（test-plan §3.1 presentation）
 
 ---
 
