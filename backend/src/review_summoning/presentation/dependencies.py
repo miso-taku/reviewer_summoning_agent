@@ -9,6 +9,7 @@ from typing import Annotated
 from fastapi import Depends
 
 from review_summoning.application.use_cases.run_review_pipeline import RunReviewPipelineUseCase
+from review_summoning.infrastructure.factory import build_review_pipeline_use_case
 
 # テストで `app.dependency_overrides` と併用する型エイリアス
 UseCaseFactory = Callable[[], RunReviewPipelineUseCase]
@@ -23,11 +24,8 @@ def set_use_case_factory(factory: UseCaseFactory | None) -> None:
 
 
 def _build_use_case_from_env() -> RunReviewPipelineUseCase:
-    """フェーズ 4 で PydanticAI 実装に差し替え。未実装時は明示的に失敗する。"""
-    raise RuntimeError(
-        "LLM インフラはフェーズ 4 で実装予定です。"
-        "テストでは dependency_overrides で RunReviewPipelineUseCase を注入してください。"
-    )
+    """環境変数から PydanticAI インフラを組み立てる (TEC §8.1)。"""
+    return build_review_pipeline_use_case()
 
 
 def get_review_pipeline_use_case() -> RunReviewPipelineUseCase:

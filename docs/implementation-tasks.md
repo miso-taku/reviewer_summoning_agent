@@ -57,12 +57,12 @@
 
 ## フェーズ 4 — infrastructure（PydanticAI）
 
-- [ ] **4-1** `infrastructure/config.py`：Settings（API キー、モデル名、ログレベル）（TEC §10）
-- [ ] **4-2** `pydantic_ai_summoning.py`：`ReviewerSummoningPort` 実装（3 ペルソナ構造化出力）
-- [ ] **4-3** `pydantic_ai_review.py`：`SingleReviewPort` 実装（構造化レビュー）
-- [ ] **4-4** `pydantic_ai_editor.py`：`EditorIntegrationPort` 実装（統合コメント・優先修正等）。`priority_fixes` 最大 20 件・各配列上限は TEC §5.2 に従いプロンプトまたは受信後トリム
-- [ ] **4-5** 各 LLM 呼び出しに個別タイムアウト（httpx / `wait_for`）。プロバイダ 4xx/5xx・パース失敗をドメイン／アプリケーション例外に正規化（TEC §9）
-- [ ] **4-6** ログ：原稿本文を出さない・デバッグ時マスク（TEC §8.3 / REQ-NF-022）
+- [x] **4-1** `infrastructure/config.py`：Settings（API キー、モデル名、ログレベル）（TEC §10）
+- [x] **4-2** `pydantic_ai_summoning.py`：`ReviewerSummoningPort` 実装（3 ペルソナ構造化出力）
+- [x] **4-3** `pydantic_ai_review.py`：`SingleReviewPort` 実装（構造化レビュー）
+- [x] **4-4** `pydantic_ai_editor.py`：`EditorIntegrationPort` 実装（統合コメント・優先修正等）。`priority_fixes` 最大 20 件・各配列上限は TEC §5.2 に従いプロンプトまたは受信後トリム
+- [x] **4-5** 各 LLM 呼び出しに個別タイムアウト（httpx / `wait_for`）。プロバイダ 4xx/5xx・パース失敗をドメイン／アプリケーション例外に正規化（TEC §9）
+- [x] **4-6** ログ：原稿本文を出さない・デバッグ時マスク（TEC §8.3 / REQ-NF-022）
 
 ---
 
