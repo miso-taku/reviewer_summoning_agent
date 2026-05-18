@@ -70,11 +70,11 @@
 
 [test-plan.md §3.2](./test-plan.md) の ID に沿う。
 
-- [ ] **5-1** **IT-API-01**：依存注入でインフラをスタブ化、`POST /api/v1/review` が 200 で `reviewers`（3）・`reviews`（3）・`editor`・`meta`（FUN §6.1.2 整合）
-- [ ] **5-2** **IT-API-02**：422 + `VALIDATION_ERROR`（テーマ空、3 ブロック全非空違反、合計 200000 超過等）
-- [ ] **5-3** **IT-API-03**：スタブ遅延 → 504 + `REQUEST_TIMEOUT`
-- [ ] **5-4** **IT-API-04**：スタブが例外 → 502 / 503 と `error.code`
-- [ ] **5-5** `pytest` マーカー（例: `@pytest.mark.llm_live`）で実 LLM テストを CI から除外する設定を `pyproject.toml` または `pytest.ini` と README に記載（test-plan §6.2）
+- [x] **5-1** **IT-API-01**：依存注入でインフラをスタブ化、`POST /api/v1/review` が 200 で `reviewers`（3）・`reviews`（3）・`editor`・`meta`（FUN §6.1.2 整合）
+- [x] **5-2** **IT-API-02**：422 + `VALIDATION_ERROR`（テーマ空、3 ブロック全非空違反、合計 200000 超過等）
+- [x] **5-3** **IT-API-03**：スタブ遅延 → 504 + `REQUEST_TIMEOUT`
+- [x] **5-4** **IT-API-04**：スタブが例外 → 502 / 503 と `error.code`
+- [x] **5-5** `pytest` マーカー（例: `@pytest.mark.llm_live`）で実 LLM テストを CI から除外する設定を `pyproject.toml` または `pytest.ini` と README に記載（test-plan §6.2）
 
 ---
 

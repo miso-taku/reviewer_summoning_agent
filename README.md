@@ -93,6 +93,14 @@ cd backend
 uv run pytest
 ```
 
+結合テスト（IT-API）のみ:
+
+```powershell
+uv run pytest tests/integration
+```
+
+**IT-API の定義**: `POST /api/v1/review` を httpx `AsyncClient` で叩き、LLM は **ポートフェイク**（`tests/support/port_fakes.py`）を `app.dependency_overrides` 経由で注入する。実 PydanticAI／HTTP は呼ばない。
+
 カバレッジ付き:
 
 ```powershell
