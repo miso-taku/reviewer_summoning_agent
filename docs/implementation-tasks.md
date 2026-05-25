@@ -80,13 +80,13 @@
 
 ## フェーズ 6 — フロントエンド（`web/`）
 
-- [ ] **6-1** Next.js（App Router）+ TypeScript + Tailwind を `web/` にスキャフォールド（Node 20 LTS または 22 を README に明記）（TEC §11）
-- [ ] **6-2** `web/.env.local.example`：`NEXT_PUBLIC_API_BASE_URL`（TEC §10.2）
-- [ ] **6-3** `lib/validation.ts`：FUN §5.1 の定数・必須組合せ・合計サイズのクライアント検証（単体テスト推奨）
-- [ ] **6-4** `lib/api-client.ts`：`POST`、Base URL、`AbortController` で **180s** タイムアウト（TEC §14）
-- [ ] **6-5** 単一ページ UI（FUN §4）：ヘッダ、入力エリア、段階インジケータ（Loading 時の経過時間ベースのハイライト移動）、結果の 3 カード + 編集長ブロック強調（FUN §4.3）
-- [ ] **6-6** 状態：`Idle` → `Loading` → `Result` / エラー表示（FUN §7）。422／5xx／ネットワークの UC-03 表示（FUN §3.3）
-- [ ] **6-7** アクセシビリティ最小：`aria-label` / `role="alert"` 等（FUN §4.5）
+- [x] **6-1** Next.js（App Router）+ TypeScript + Tailwind を `web/` にスキャフォールド（Node 20 LTS または 22 を README に明記）（TEC §11）
+- [x] **6-2** `web/.env.local.example`：`NEXT_PUBLIC_API_BASE_URL`（TEC §10.2）
+- [x] **6-3** `lib/validation.ts`：FUN §5.1 の定数・必須組合せ・合計サイズのクライアント検証（単体テスト推奨）
+- [x] **6-4** `lib/api-client.ts`：`POST`、Base URL、`AbortController` で **180s** タイムアウト（TEC §14）
+- [x] **6-5** 単一ページ UI（FUN §4）：ヘッダ、入力エリア、段階インジケータ（Loading 時の経過時間ベースのハイライト移動）、結果の 3 カード + 編集長ブロック強調（FUN §4.3）
+- [x] **6-6** 状態：`Idle` → `Loading` → `Result` / エラー表示（FUN §7）。422／5xx／ネットワークの UC-03 表示（FUN §3.3）
+- [x] **6-7** アクセシビリティ最小：`aria-label` / `role="alert"` 等（FUN §4.5）
 
 ---
 
